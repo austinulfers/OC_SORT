@@ -198,7 +198,7 @@ class OCSort(object):
         Returns the a similar array, where the last column is the object ID.
         NOTE: The number of objects returned may differ from the number of detections provided.
         """
-        if output_results is None:
+        if output_results is None or not bool(output_results):
             return np.empty((0, 5))
 
         self.frame_count += 1
